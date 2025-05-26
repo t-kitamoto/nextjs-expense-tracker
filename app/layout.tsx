@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
+import Header from '@/components/Header';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -22,7 +23,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={roboto.variable}>{children}</body>
+        <body className={roboto.variable}>
+          <Header />
+          <main className="container">{children}</main>
+        </body>
       </html>
     </ClerkProvider>
   );
