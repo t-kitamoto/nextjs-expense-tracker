@@ -19,7 +19,7 @@ async function addTransaction(formData: FormData): Promise<TransactionResult> {
 
   // Check for input values
   if (!textValue || textValue === '' || !amountValue) {
-    return { error: 'Text or amount is missing' };
+    return { error: '内容または金額が未入力です。' };
   }
 
   const text: string = textValue.toString();
@@ -30,7 +30,7 @@ async function addTransaction(formData: FormData): Promise<TransactionResult> {
 
   // Check for user
   if (!userId) {
-    return { error: 'User not found' };
+    return { error: 'ユーザー情報が取得できませんでした。' };
   }
 
   try {

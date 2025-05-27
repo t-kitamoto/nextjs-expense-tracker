@@ -9,7 +9,7 @@ async function getUserBalance(): Promise<{
   const { userId } = await auth();
 
   if (!userId) {
-    return { error: 'User not found' };
+    return { error: 'ユーザー情報が取得できませんでした。' };
   }
 
   try {
@@ -24,7 +24,7 @@ async function getUserBalance(): Promise<{
 
     return { balance };
   } catch (error) {
-    return { error: 'Database error' };
+    return { error: '内部エラーが発生しました。' };
   }
 }
 

@@ -10,7 +10,7 @@ async function deleteTransaction(transactionId: string): Promise<{
   const { userId } = await auth();
 
   if (!userId) {
-    return { error: 'User not found' };
+    return { error: 'ユーザー情報が取得できませんでした。' };
   }
 
   try {
@@ -23,9 +23,9 @@ async function deleteTransaction(transactionId: string): Promise<{
 
     revalidatePath('/');
 
-    return { message: 'Transaction deleted' };
+    return { message: '取引が削除されました。' };
   } catch (error) {
-    return { error: 'Database error' };
+    return { error: '内部エラーが発生しました。' };
   }
 }
 

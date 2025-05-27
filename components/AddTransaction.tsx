@@ -13,36 +13,31 @@ const AddTransaction = () => {
     if (error) {
       toast.error(error);
     } else {
-      toast.success('Transaction added');
+      toast.success('取引を追加しました');
       formRef.current?.reset();
     }
   };
   return (
     <>
-      <h3>Add transaction</h3>
+      <h3>取引の追加</h3>
       <form ref={formRef} action={clientAction}>
         <div className="formcontrol">
-          <label htmlFor="text">Text</label>
-          <input
-            type="text"
-            id="text"
-            name="text"
-            placeholder="Enter text..."
-          />
+          <label htmlFor="text">内容</label>
+          <input type="text" id="text" name="text" placeholder="内容を入力" />
         </div>
         <div className="formcontrol">
           <label htmlFor="amount">
-            Amount <br /> (negative - expense, positive - income)
+            金額 <br /> ※支出はマイナス、収入はプラスで入力してください。
             <input
               type="number"
               id="amount"
               name="amount"
-              placeholder="Enter amount..."
+              placeholder="金額を入力"
               step="0.01"
             />
           </label>
         </div>
-        <button className="btn">Add transaction</button>
+        <button className="btn">取引の追加</button>
       </form>
     </>
   );

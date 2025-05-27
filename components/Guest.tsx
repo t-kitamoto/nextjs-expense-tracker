@@ -3,8 +3,8 @@ import { SignInButton } from '@clerk/nextjs';
 const Guest = () => {
   return (
     <div className="guest">
-      <h1>Welcome</h1>
-      <p>Please sign in to manage your transactions</p>
+      <h1>ようこそ</h1>
+      <p>ログインして取引を管理しましょう</p>
       <SignInButton />
     </div>
   );

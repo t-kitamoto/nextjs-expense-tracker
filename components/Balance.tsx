@@ -1,13 +1,13 @@
 import getUserBalance from '@/app/actions/getUserBalance';
-import { addCommas } from '@/lib/utils';
+import { formatYen } from '@/lib/utils';
 
 const Balance = async () => {
   const { balance } = await getUserBalance();
 
   return (
     <>
-      <h4>Your Balance</h4>
-      <h1>${addCommas(Number(balance?.toFixed(2) ?? 0))}</h1>
+      <h4>残高</h4>
+      <h1>{formatYen(balance ?? 0)}</h1>
     </>
   );
 };
