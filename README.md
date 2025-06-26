@@ -21,7 +21,8 @@ https://nextjs-expense-tracker-zimj.vercel.app/
 - Vercel（デプロイ）
 
 ---
-![収支管理画面](https://github.com/t-kitamoto/nextjs-expense-tracker/blob/main/public/sample.png)
+<img src="https://github.com/t-kitamoto/nextjs-expense-tracker/blob/main/public/sample.png" alt="収支管理画面" width="450px">
+
 ---
 ## カスタマイズ内容
 
